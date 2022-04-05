@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(BelajarImage());
 
-class MyApp extends StatelessWidget {
+class BelajarImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'MY ASSIGNMENT',
       home: Scaffold(
         appBar: AppBar(
-          title: Text('PEMROGRAMAN MOBILE'),
+          title: Text("belajarFlutter.com"),
         ),
-        body: Center(
-          child: Text('KHUNSUL KHATIMAH'),
-        ),
-      ),
+        body: Image.asset('assets/flutter.png'),
+      )
     );
   }
 }
