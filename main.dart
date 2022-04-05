@@ -1,17 +1,46 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(BelajarImage());
+void main() {
+  runApp(MyApp());
+}
 
-class BelajarImage extends StatelessWidget {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("belajarFlutter.com"),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: MyHomePage(),
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(
+        title: Text('ElevatedButton'),
+        backgroundColor: Colors.red,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // penggunaan dasar
+            ElevatedButton(
+              onPressed: () {
+                print('ini done');
+              },
+              child: new Text('belajarflutter.com'),
+            ),
+          ],
         ),
-        body: Image.asset('assets/flutter.png'),
-      )
+      ),
     );
   }
 }
